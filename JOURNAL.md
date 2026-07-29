@@ -20,13 +20,13 @@
 ## Week 8 — Reproduction & solution planning
 
 **Reproduction commit link:** [link to commit documenting the reproduced issue]
-
+https://github.com/CrabHeadd/pathreview/commit/a3e3abfa573c60db6442778b01f70b6889900e63
 **Reproduction summary:**
 [1–2 sentences: How did you reproduce the issue? What did you observe?]
 When I deleted user1@example.com by authenticating on the swagger ui and then inputting their profile id, all of their reviews were deleted in the docker database as expected, I checked, however in the /profiles/{profile_id} delete endpoint, and in the function delete_profile in profile_service.py called by the endpoint, nothing ever gets rid of the vector store embeddings associated with the deleted user, thus they are likely still there. 
 
 **PLAN.md link:** [link to PLAN.md in your fork]
-
+https://github.com/CrabHeadd/pathreview/commit/a3e3abfa573c60db6442778b01f70b6889900e63#diff-1d972b4ac04c89bf54f79f2111064626b16aeb8bb9488f4ca0aed3ab1e728d2c
 **Walkthrough video (recommended):** [link to your Loom video, ≤2 min — recommended, not graded]
 
 **Blockers or open questions:**
