@@ -7,6 +7,7 @@ from api.schemas.profile import ProfileCreate, ProfileUpdate
 from core.models.ingested_source import IngestedSource
 from core.models.profile import Profile
 from core.models.review import Review
+from rag.retriever.vector_store import VectorStore
 
 log = structlog.get_logger()
 
@@ -94,6 +95,15 @@ async def delete_profile(
         reviews = result.scalars().all()
         for review in reviews:
             await db.delete(review)
+
+        # Delete vector store embeddings
+        stmt = select(IngestedSource.id).where(IngestedSource.profile_id == profile_id)
+        result = await db.execute(stmt)
+        ids = result.scalars().all()
+        collection_name = f"profile_{profile_id}"
+        vectors = VectorStore()
+        for source_id in ids:
+            vectors.delete_by_source_id(source_id, collection_name)
 
         # Delete related ingested sources
         stmt = select(IngestedSource).where(IngestedSource.profile_id == profile_id)
