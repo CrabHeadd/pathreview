@@ -67,3 +67,51 @@ core/services/profile_service.py
 
 **Draft PR feedback received from:** [name or Slack handle, or "none"]
 none
+
+
+
+## Week 10 — Iteration & reflection
+
+### Reviewer feedback
+
+**Feedback received:** [ ] Yes  [X] No — still awaiting review
+
+**Summary of feedback:**
+[What did reviewers comment on? Or note that no review came in.]
+No review
+**How you responded:**
+[What changes did you make, or what did you reply? If no feedback,
+leave blank.]
+
+---
+
+### Reflection
+
+**What was harder than you expected?**
+[Be specific — what part of the process, codebase, or workflow
+surprised you?]
+
+Working with an incomplete source code was the most difficult part of the project, as it meant that I wasn't too sure how things fit together, and how to implement my own fixes. It felt more like I was coding based off of gut feeling rather than what I knew for certain
+
+**What did you learn about working in a large codebase?**
+[What's different about contributing to someone else's production code
+vs. building your own project?]
+
+Sometimes it might not be very put together, which makes it more hard to navigate. Also I did not realize testing was such a large part of this.
+
+**How did AI tools help — and where did they fall short?**
+[Where was AI assistance most useful this module? Where did you need
+to go beyond what AI could give you?]
+
+After trying to navigate the codebase myself for a while I then opted to try and let ChatGPT give it a go and tried to explain the whole project and gave it snippets of code, but it even confessed that it was unsure of how the whole thing worked. Thus it didn't really help. 
+
+**What would you do differently if you started over?**
+[Issue selection, planning, implementation, or process — anything
+you'd change?]
+
+I would choose an easier issue, as I thought that the tier 2 problem sounded easy, but working with the large codebase made it significantly harder
+
+**What are you most proud of from this module?**
+[One thing — it doesn't have to be the PR itself.]
+
+I am most proud of actually trying to get everything working, despite not really understanding much of it. Before I started this course I didn't even know you could do half of this stuff in python, like accessing databases and making a whole ui.
